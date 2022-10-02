@@ -64,15 +64,15 @@ operator {
 }
 
 .equal-sign {
-    background-color: #2e86c0;
-    border-color:#337cac;
-    color: #fff;
+    
+    
+    color: black;
     grid-area: 2/4/6/5;
     height: 100%;
 }
 
 .equal-sign:hover {
-    background-color: #4e9ed4;
+    background-color: #eaeaea;
 }
 
 .calculator-keys {
