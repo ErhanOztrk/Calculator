@@ -7,14 +7,18 @@ let operator=null;
 let waitingForSecondValue=false;
 
 
+// assign the value to the display value
 
 const updateDisplay = () => { display.value = displayValue}
 
+// get respond when you click on calculator-keys area
 keys.addEventListener('click',function(e){
     const element=e.target;
 
+// we check if the element is button or not
     if(!element.matches('button')) return;
 
+// check element s classlist if it is operator or button and display the element's value
     if(element.classList.contains('operator')) {
         //console.log('operator',element.value);
         handleOperator(element.value);
@@ -76,6 +80,8 @@ function handleOperator(nextOperator) {
 
 } 
 
+
+// send number's value to the display screen
 function inputNumber(num) {
     if(waitingForSecondValue) {
         displayValue=num;
@@ -86,6 +92,7 @@ function inputNumber(num) {
     console.log(displayValue,firstValue,operator,waitingForSecondValue);
 }
 
+//function checks if it includes "." 
 function inputDecimal() {
     if(!displayValue.includes('.')){
         displayValue += '.' ;
