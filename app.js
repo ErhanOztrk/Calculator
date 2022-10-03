@@ -6,7 +6,6 @@ let firstValue=null;
 let operator=null;
 let waitingForSecondValue=false;
 
-
 // assign the value to the display value
 
 const updateDisplay = () => { display.value = displayValue}
@@ -80,14 +79,13 @@ function handleOperator(nextOperator) {
 
 } 
 
-
 // send number's value to the display screen
 function inputNumber(num) {
     if(waitingForSecondValue) {
         displayValue=num;
         waitingForSecondValue=false;
     } else {
-        displayValue=displayValue==='0'? num:displayValue+num;
+        displayValue=displayValue==='0'? num:displayValue+num;   // type control
     }
     console.log(displayValue,firstValue,operator,waitingForSecondValue);
 }
@@ -103,6 +101,3 @@ function inputDecimal() {
 function clear() {
     displayValue='0'
 }
-
-
-
