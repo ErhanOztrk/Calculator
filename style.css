@@ -14,13 +14,14 @@ body {
 }
 
 .calculator {
+    
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%,-50%);
 }
 
 .calculator-input {
@@ -77,8 +78,9 @@ operator {
 
 .calculator-keys {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     padding: 20px;
+    
 
 }

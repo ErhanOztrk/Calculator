@@ -6,10 +6,9 @@ let firstValue=null;
 let operator=null;
 let waitingForSecondValue=false;
 
-updateDisplay();
-function updateDisplay() {
-    display.value=displayValue;
-}
+
+
+const updateDisplay = () => { display.value = displayValue}
 
 keys.addEventListener('click',function(e){
     const element=e.target;
@@ -22,7 +21,7 @@ keys.addEventListener('click',function(e){
         updateDisplay();
         return;
     }
-
+    
     if(element.classList.contains('decimal')) {
        // console.log('operator',element.value);
        inputDecimal();
@@ -38,7 +37,7 @@ keys.addEventListener('click',function(e){
     // console.log('number',element.value);
     inputNumber(element.value);
     updateDisplay();
-});
+    });
 
 function handleOperator(nextOperator) {
     const value=parseFloat(displayValue);
@@ -97,4 +96,6 @@ function inputDecimal() {
 function clear() {
     displayValue='0'
 }
+
+
 
